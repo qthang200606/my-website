@@ -1,443 +1,133 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Shop Thời Trang - Bộ Sưu Tập</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>F3 FASHION - Đăng nhập / Đăng ký</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffe0ec, #e0f7ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
+    .auth-container {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      width: 350px;
+      animation: fadeIn 0.5s ease;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff3399;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #ff3399;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .toggle {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .toggle a {
+      color: #ff3399;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hint {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Header -->
-  <div class="top-header">
-    <div class="left-section">
-      <a href="banhang.html" class="seller-btn">Trở thành người bán</a>
-
-      <a href="#" id="toggle-category">Danh mục</a>
-
-    </div>
-    <div class="right-section">
-      <a href="#">Việt Nam</a>
-      <a href="#" id="open-register">Đăng ký</a>
-      <a href="#" id="open-login">Đăng nhập</a>
-    </div>
-  </div>
-  <!-- DANH MỤC HIỂN THỊ -->
-<div class="category-menu" id="category-menu">
-  <div class="category-row">
-    <a href="ao.html" class="category-item">
-      <img src="image/áo.jpg" alt="Áo">
-      <span>Áo</span>
-    </a>
-    <a href="quan.html" class="category-item">
-      <img src="image/quần.jpg" alt="Quần">
-      <span>Quần</span>
-    </a>
-    <a href="tui.html" class="category-item">
-      <img src="image/tui.png" alt="Túi Xách">
-      <span>Túi Xách</span>
-    </a>
-    <a href="vay.html" class="category-item">
-      <img src="image/vay.png" alt="Váy/Đầm">
-      <span>Váy/Đầm</span>
-    </a>
-    <a href="trangdiem.html" class="category-item">
-      <img src="image/makeup.png" alt="Trang Điểm">
-      <span>Trang Điểm</span>
-    </a>
-
-
-  </div>
-</div>
-
-
-  <!-- Main Header -->
-  <header class="main-header">
-    <div class="logo">F3 FASHION</div>
-    <input type="text" placeholder="Tìm kiếm" class="search-box">
-    <div class="icons">
-      <a href="index.html"><span>🏠</span></a>
-      <span id="chat-icon" style="cursor: pointer;">💬</span>
-      <span id="notify-icon" style="cursor: pointer;">🔔</span>
-      <span id="cart-icon" style="cursor: pointer;">🛒</span>
-
-    </div>
-  </header>
-
-  <!-- Bộ Sưu Tập -->
-  <section class="collection-section">
-    <div class="carousel-wrapper">
-      <button class="nav prev">←</button>
-      <div class="carousel">
-        <div class="card">
-          <img src="image/index.jpg" alt="Under the Sun">
-          <h3>UNDER THE SUN</h3>
-          <p>Bộ sưu tập mang tinh thần tự do mùa hè...</p>
-          
-        </div>
-        <div class="card">
-          <img src="image/sundayresset.jpg" alt="Sunday Reset">
-          <h3>SUNDAY RESET</h3>
-          <p>Bộ sưu tập thư giãn giữa ngày hè...</p>
-          
-        </div>
-        <div class="card">
-          <img src="image/tuisach.jpg" alt="Bag to match">
-          <h3>BAG TO MATCH</h3>
-          <p>chọn túi sách mà bạn yêu thích</p>
-          
-        </div>
-        <div class="card">
-          <img src="image/kols.jpg" alt="kolspickskolspicks">
-          <h3>KOLSPICKSKOLSPICKS</h3>
-          <p>Mặc theo KOLS</p>
-          
-        </div>
-          <div class="card">
-          <img src="image/look.jpg" alt="Trendy tone">
-          <h3>TRENDY TONE SS25SS25</h3>
-          <p>Xu hướng đang thịnh hành giới làm đẹp...</p>
-          
-          
-        </div>
-
-      </div>
-      <button class="nav next">→</button>
-    </div>
-  </section>
-  <!-- Thanh danh mục icon -->
-<div class="icon-category-bar">
- 
-  <div class="icon-category-scroll">
-    
-    <a href="ao.html"><img src="image/áo.jpg" alt=""><span>Áo</span></a>
-    <a href="quan.html"><img src="image/quần.jpg" alt=""><span>Quần</span></a>
-    <a href="vay.html"><img src="image/vay.png" alt=""><span>Váy/Đầm</span></a>
-    <a href="trangdiem.html"><img src="image/makeup.png" alt=""><span>Trang Điểm</span></a>
-  </div>
+<!-- Đăng nhập -->
+<div class="auth-container" id="login-form">
+  <h2>Đăng nhập</h2>
+  <form onsubmit="handleLogin(event)">
+    <input type="email" id="login-email" placeholder="Email" required />
+    <input type="password" id="login-password" placeholder="Mật khẩu" required />
+    <button type="submit">Đăng nhập</button>
+  </form>
+  <div class="toggle">Chưa có tài khoản? <a onclick="switchForm('register')">Đăng ký</a></div>
  
 </div>
-<!-- Bộ Sưu Tập nổi bật -->
-<section class="scrollable-collection">
-  <h2><img src="image/icon-collection.png" alt="" style="width: 22px; vertical-align: middle;"> Bộ Sưu Tập</h2>
-  <div class="scroll-wrapper">
-    <button class="scroll-btn left">❮</button>
-    <div class="scroll-track" id="scroll-track">
-      <!-- CARD 1 -->
-      <div class="scroll-card">
-        <img src="image/tuibanthich.webp" alt="">
-        <h3>LOOK NÀO CHO BẠN? <a href="#"></a></h3>
-        <p>Xu hướng làm đẹp nổi bật của mùa xuân 2025. Mỗi phong cách mang đến vẻ mới mẻ riêng biệt.</p>
-      </div>
-      <!-- CARD 2 -->
-      <div class="scroll-card">
-        <img src="image/mactheokol.webp" alt="">
-        <h3>HÈ ĐẾN RỒI! <a href="#"></a></h3>
-        <p>“Under The Sun” mang tinh thần tự do của mùa hè, tràn đầy năng lượng & sắc màu.</p>
-      </div>
-      <!-- CARD 3 -->
-      <div class="scroll-card">
-        <img src="image/hehee.webp" alt="">
-        <h3>KHÔNG THỂ BỎ LỠ <a href="#"></a></h3>
-        <p>Đoán xem thương hiệu nào sẽ đồng hành cùng bạn với bộ sưu tập hè năm nay?</p>
-      </div>
-      <!-- CARD 4 -->
-      <div class="scroll-card">
-        <img src="image/sundayresset.jpg" alt="">
-        <h3>CUỐI TUẦN LÀM GÌ? <a href="#"></a></h3>
-        <p>Khám phá “Sunday Reset” – bộ sưu tập thư giãn dịp cuối tuần cực chill.</p>
-      </div>
-    </div>
-    <button class="scroll-btn right">❯</button>
-  </div>
-</section>
 
+<!-- Đăng ký -->
+<div class="auth-container" id="register-form" style="display: none;">
+  <h2>Đăng ký</h2>
+  <form onsubmit="handleRegister(event)">
+    <input type="text" placeholder="Họ và tên" required />
+    <input type="email" placeholder="Email" required />
+    <input type="password" placeholder="Mật khẩu" required />
+    <input type="password" placeholder="Nhập lại mật khẩu" required />
+    <button type="submit">Đăng ký</button>
+  </form>
+  <div class="toggle">Đã có tài khoản? <a onclick="switchForm('login')">Đăng nhập</a></div>
+</div>
 
-
-
-  <!-- MODAL: Đăng ký -->
-  <div class="modal" id="register-modal">
-    <div class="register-wrapper">
-      <div class="register-left">
-        <img src="image/voucher.png" alt="Voucher 155K">
-      </div>
-      <div class="register-form">
-        <span class="close-btn" onclick="closeModal()">×</span>
-        <h2>Đăng ký</h2>
-        <form>
-          <input type="text" placeholder="Họ và tên*" required>
-          <div class="gender-row">
-            <label><input type="radio" name="gender"> Nữ</label>
-            <label><input type="radio" name="gender"> Nam</label>
-            <label><input type="radio" name="gender"> Khác</label>
-          </div>
-          <input type="email" placeholder="Email*" required>
-          <div class="password-field">
-            <input type="password" placeholder="Mật khẩu*" required>
-            <span class="eye-icon">👁️</span>
-          </div>
-          <small>Mật khẩu cần 8 ký tự, 1 chữ in hoa và 1 ký tự đặc biệt.</small>
-          <div class="password-field">
-            <input type="password" placeholder="Nhập lại mật khẩu*" required>
-            <span class="eye-icon">👁️</span>
-          </div>
-          <div class="phone-row">
-            <span class="flag">🇻🇳 +84</span>
-            <input type="text" placeholder="Số điện thoại*" required>
-          </div>
-          <label class="policy">
-            <input type="checkbox" required>
-            Tôi đồng ý với <strong>Điều khoản</strong> & <strong>Chính sách</strong> của F3 FASHION .
-          </label>
-          <button type="submit">Đăng ký</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL: Đăng nhập -->
-  <div class="modal" id="login-modal">
-    <div class="login-wrapper">
-      <span class="close-btn" onclick="closeModal()">×</span>
-      <h2>Đăng nhập</h2>
-  
-      <form class="login-form">
-        <input type="email" placeholder="Email*" required>
-        <input type="password" placeholder="Mật khẩu*" required>
-        <button type="submit">Đăng nhập</button>
-      </form>
-  
-      <div class="divider">Hoặc</div>
-  
-      <div class="social-login">
-        <button class="google"><img src="image/gg.jpg"> Tiếp tục với Google</button>
-        <button class="facebook"><img src="image/facebook.jpg"> Tiếp tục với Facebook</button>
-        <button class="zalo"><img src="image/zalo1.jpg"> Tiếp tục với Zalo</button>
-      </div>
-  
-      <div class="extra-links">
-        <a href="#">Đăng ký</a>
-        <span>|</span>
-        <a href="#">Đăng nhập e-mail</a>
-        <span>|</span>
-        <a href="#">Quên mật khẩu</a>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- SCRIPT -->
-  <script>
-    // Carousel
-    const carousel = document.querySelector('.carousel');
-    document.querySelector('.next').onclick = () => carousel.scrollLeft += 320;
-    document.querySelector('.prev').onclick = () => carousel.scrollLeft -= 320;
-
-    // Modal logic
-    const modals = document.querySelectorAll('.modal');
-    const registerModal = document.getElementById('register-modal');
-    const loginModal = document.getElementById('login-modal');
-
-    document.getElementById('open-register').onclick = e => {
-      e.preventDefault();
-      registerModal.style.display = 'flex';
-    };
-
-    document.getElementById('open-login').onclick = e => {
-      e.preventDefault();
-      loginModal.style.display = 'flex';
-    };
-
-    function closeModal() {
-      modals.forEach(m => m.style.display = 'none');
-    }
-
-    window.onclick = function (e) {
-      modals.forEach(m => {
-        if (e.target === m) m.style.display = 'none';
-      });
-    };
-
-    // Toggle password visibility
-    document.querySelectorAll('.eye-icon').forEach(icon => {
-      icon.addEventListener('click', () => {
-        const input = icon.previousElementSibling;
-        input.type = input.type === 'password' ? 'text' : 'password';
-      });
-    });
-
-    document.getElementById('toggle-category').onclick = function (e) {
-  e.preventDefault();
-  document.getElementById('category-menu').classList.toggle('active');
-};
-// Gắn sự kiện click cho icon 💬 trên header
-document.getElementById('chat-icon').onclick = function () {
-  toggleChat();
-};
-
-function toggleChat() {
-  const popup = document.getElementById('chat-popup');
-  popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
-}
-
-function sendMessage() {
-  const msg = document.getElementById('chat-message').value.trim();
-  if (msg) {
-    alert("Tin nhắn của bạn đã gửi:\n" + msg);
-    document.getElementById('chat-message').value = '';
-    toggleChat();
-  } else {
-    alert("Vui lòng nhập nội dung.");
+<script>
+  function switchForm(type) {
+    document.getElementById('login-form').style.display = type === 'login' ? 'block' : 'none';
+    document.getElementById('register-form').style.display = type === 'register' ? 'block' : 'none';
   }
-}
 
-// Gắn sự kiện mở/đóng thông báo
-document.getElementById('notify-icon').onclick = function () {
-  toggleNotify();
-};
+  function handleLogin(e) {
+    e.preventDefault();
+    const email = document.getElementById("login-email").value.trim();
+    const password = document.getElementById("login-password").value.trim();
 
-function toggleNotify() {
-  const box = document.getElementById('notify-popup');
-  box.style.display = box.style.display === 'block' ? 'none' : 'block';
-}
-// Sự kiện click vào biểu tượng giỏ hàng
-document.getElementById('cart-icon').onclick = function () {
-  toggleCart();
-};
+    if (email === "nho@gmail.com" && password === "123") {
+      localStorage.setItem("loggedIn", "true");
+      window.location.href = "shop.html";
+    } else {
+      alert("Sai email hoặc mật khẩu.");
+    }
+  }
 
-function toggleCart() {
-  const popup = document.getElementById('cart-popup');
-  popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
-}
-
-// Trượt ngang bộ sưu tập
-const track = document.getElementById('scroll-track');
-document.querySelector('.scroll-btn.left').onclick = () => {
-  track.scrollLeft -= 360;
-};
-document.querySelector('.scroll-btn.right').onclick = () => {
-  track.scrollLeft += 360;
-};
-
-//
-  </script>
-  <!-- NEW FOOTER -->
-<footer style="background-color: #1c1c1c; color: #eee; padding: 40px 20px; font-size: 14px;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; max-width: 1200px; margin: auto;">
-
-    <!-- Chăm sóc khách hàng -->
-    <div>
-      <h4 style="color: white; margin-bottom: 10px;">CHĂM SÓC KHÁCH HÀNG</h4>
-      <p><a href="huongdanmuahang.html" style="color: #ccc; text-decoration: none;">Hướng dẫn mua hàng</a></p>
-      <p><a href="#" style="color: #ccc; text-decoration: none;">Hướng dẫn bán hàng</a></p>
-      <p><a href="#" style="color: #ccc; text-decoration: none;">Hướng dẫn đổi trả hàng</a></p>
-    </div>
-
-    <!-- Về BIDU -->
-    <div>
-      <h4 style="color: white; margin-bottom: 10px;">VỀ BIDU</h4>
-      <p><a href="Quychehoatdong.html" style="color: #ccc; text-decoration: none;">Quy chế hoạt động</a></p>
-      <p><a href="#" style="color: #ccc; text-decoration: none;">Chính sách giải quyết khiếu nại</a></p>
-      <p><a href="#" style="color: #ccc; text-decoration: none;">Chính sách bảo mật</a></p>
-    </div>
-
-    <!-- Thanh toán -->
-    <div>
-      <h4 style="color: white; margin-bottom: 10px;">THANH TOÁN</h4>
-      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-        <img src="image/cash_vi.png" alt="Cash" width="40">
-        <img src="image/onepay.png" alt="OnePay" width="40">
-        <img src="image/vnpay.png" alt="VNPAY" width="40">
-        <img src="image/momo.png" alt="MoMo" width="40">
-      </div>
-    </div>
-
-    <!-- Vận chuyển -->
-    <div>
-      <h4 style="color: white; margin-bottom: 10px;">VẬN CHUYỂN</h4>
-      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-        <img src="image/icon_ghtk.png" alt="GHN" width="40">
-        <img src="image/icon_ghn.png" alt="GHN" width="40">
-        <img src="image/icon_vietelpost.png" alt="Viettel" width="40">
-        <img src="image/icon.png" alt="GHTK" width="40">
-      </div>
-    </div>
-
-  <!-- Kết nối + App -->
-<div style="text-align: center;">
-  <h4 style="color: white; margin-bottom: 12px; font-size: 15px;">KẾT NỐI VỚI CHÚNG TÔI</h4>
-
-  <p style="margin: 10px 0;">
-    <a href="#" style="display: inline-block; margin: 0 8px;">
-      <a href="https://www.facebook.com/thang.ngoquang.374?locale=vi_VN" target="_blank" style="display: inline-block; margin: 0 8px;">
-  <img src="image/fc.png" alt="Facebook" style="width: 22px; height: 22px;">
-</a>
-    </a>
-     <a href="https://www.instagram.com/nho_0.6/" target="_blank" style="display: inline-block; margin: 0 8px;">
-      <img src="image/ig.png" alt="Instagram" style="width: 22px; height: 22px;">
-    </a>
-  </p>
-
-  <h4 style="color: white; margin: 18px 0 12px; font-size: 15px;">TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI</h4>
-
-  <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-    <a href="#">
-      <img src="image/app.png" alt="App Store" style="height: 36px;">
-    </a>
-    <a href="#">
-      <img src="image/gg.png" alt="Google Play" style="height: 36px;">
-    </a>
-  </div>
-</div>
-
-
-</footer>
-<footer style="background-color: #1c1c1c; color: #eee; text-align: center; padding: 40px 20px; font-size: 14px; line-height: 1.8;">
-  <strong>CÔNG TY TNHH F3 FASHION</strong><br>
-  Địa chỉ: Số 12 Lê Duẩn, Quận Hải Châu, Thành phố Đà Nẵng, Việt Nam.<br>
-  Điện thoại: 0236 123 456 - Email: contact@f3fashion.vn<br>
-  Người đại diện pháp luật: Trần Thị Nhi<br>
-  Mã số doanh nghiệp: 0402200011 do Sở KH&ĐT TP Đà Nẵng cấp ngày 15/04/2022<br><br>
-  © 2025 - Bản quyền thuộc về Công ty TNHH F3 FASHION
-</footer>
-<!-- Hộp chat mini hiện tại góc phải -->
-<div class="chat-popup" id="chat-popup">
-  <div class="chat-header">
-    Chat với F3 FASHION
-    <span class="close-btn" onclick="toggleChat()">×</span>
-  </div>
-  <div class="chat-content">
-    <p>Xin chào 👋 Bạn cần hỗ trợ gì?</p>
-    <textarea id="chat-message" placeholder="Nhập tin nhắn..."></textarea>
-    <button onclick="sendMessage()">Gửi</button>
-  </div>
-</div>
-<!-- Hộp thông báo -->
-<div class="notify-popup" id="notify-popup">
-  <div class="notify-header">
-    Thông báo mới
-    <span class="close-btn" onclick="toggleNotify()">×</span>
-  </div>
-  <div class="notify-content">
-    <ul>
-      <li>🎉 Ưu đãi 20% cho đơn đầu tiên!</li>
-      <li>🛍️ Bộ sưu tập hè mới vừa cập bến</li>
-      <li>🚚 Giao hàng miễn phí toàn quốc hôm nay</li>
-    </ul>
-  </div>
-</div>
-<!-- Hộp giỏ hàng -->
-<div class="cart-popup" id="cart-popup">
-  <div class="cart-header">
-    Giỏ hàng của bạn
-    <span class="close-btn" onclick="toggleCart()">×</span>
-  </div>
-  <div class="cart-content">
-    <p>🧺 Chưa có sản phẩm nào trong giỏ.</p>
-    <!-- Có thể thêm danh sách sản phẩm tại đây sau -->
-    <button onclick="window.location.href='thanhtoan.html'">Thanh toán</button>
-  </div>
-</div>
+  function handleRegister(e) {
+    e.preventDefault();
+    alert("Đăng ký thành công! Mời bạn đăng nhập.");
+    switchForm('login');
+  }
+</script>
 
 </body>
 </html>

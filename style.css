@@ -17,10 +17,12 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
+
 .logo {
   font-size: 24px;
   font-weight: bold;
 }
+
 
 .search-box {
   flex: 1;
@@ -114,25 +116,49 @@ body {
   right: 0;
 }
 .top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 40px; /* hoặc đúng chiều cao thực tế */
   background-color: #111;
   color: white;
-  padding: 8px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
+  padding: 5px 30px;
 }
 
-.top-header a {
-  color: white;
-  text-decoration: none;
-  margin-left: 15px;
-  font-weight: 500;
+.category-menu {
+  position: fixed;
+  top: 40px; /* đặt ngay dưới top-header */
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 60px; /* chiều cao thật của category */
+  background-color: white;
+  padding: 10px 30px;
 }
 
-.top-header .left-section a:first-child {
-  margin-left: 0;
+.main-header {
+  position: fixed;
+  top: 100px; /* = 40 + 60 */
+  left: 0;
+  right: 0;
+  z-index: 998;
+  height: 60px; /* chỉnh theo chiều cao thanh tìm kiếm */
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
 }
+.main-content {
+  margin-top: 100px; /* đẩy toàn bộ nội dung xuống dưới header */
+  padding: 20px;
+}
+
 
 .seller-btn {
   background: linear-gradient(90deg, #f857a6, #ff5858);
@@ -384,26 +410,130 @@ body {
   font-size: 20px;
   cursor: pointer;
 }
-/*danh mục*/
+/* ======= TOP HEADER (Trở thành người bán) ======= */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1002; /* Cao hơn main-header */
+  background-color: white;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* ======= MAIN HEADER (F3 FASHION + Tìm kiếm + Danh mục) ======= */
+.main-header {
+  position: fixed;
+  top: 40px; /* đẩy xuống dưới top-header */
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ======= TOP HEADER (Trở thành người bán) ======= */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1002;
+  background-color: #111;
+  color: white;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.top-header a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+.top-header .seller-btn {
+  background: linear-gradient(90deg, #f857a6, #ff5858);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* ======= MAIN HEADER (Logo, Danh mục, Tìm kiếm, Icon) ======= */
+.main-header {
+  position: fixed;
+  top: 40px; /* phía dưới top-header */
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.search-box {
+  max-width: 400px;
+  flex: 1;
+  margin: 0 20px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+}
+.icons span {
+  font-size: 18px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* ======= BODY padding để không bị che bởi header ======= */
+body {
+  padding-top: 200px; /* 40 + 80 + 80 (dropdown) */
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+/* ======= DANH MỤC MENU XỔ XUỐNG ======= */
 .category-menu {
-  display: none; /* ban đầu ẩn */
+  position: fixed;
+  top: 120px; /* dưới top-header (40) + main-header (80) */
+  left: 0;
+  right: 0;
   background-color: #fff;
   padding: 20px 40px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  display: none;
 }
-
 .category-menu.active {
-  display: block;
+  display: flex;
+  justify-content: center;
 }
-
 .category-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
-
 .category-item {
   display: flex;
   flex-direction: column;
@@ -414,73 +544,22 @@ body {
   color: #333;
   transition: transform 0.2s ease;
 }
-
 .category-item img {
   width: 40px;
   height: 40px;
   margin-bottom: 5px;
   object-fit: contain;
 }
-
 .category-item:hover {
   transform: translateY(-4px);
 }
 
-footer a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-footer a:hover {
-  color: #ccc;
-}
-
-.cart-wrapper {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  width: 500px;
-  max-width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
-  position: relative;
-}
-#cart-items p {
-  margin: 10px 0;
-}
-#cart-items .cart-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
-}
-.cart-item img {
-  width: 60px;
-  border-radius: 6px;
-}
-.cart-item-details {
-  flex: 1;
+/* ======= Section phía dưới header ======= */
+.collection-section {
+  margin-top: 42px;
 }
 
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.4);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal.show {
-  display: flex;
-}
 
 /*Phần chi tiết aquanaquan*/
 .category-menu {
@@ -488,6 +567,7 @@ footer a:hover {
   background: #fff;
   padding: 20px;
   border-bottom: 1px solid #ddd;
+  
 }
 .category-menu.active { display: flex; }
 .category-row {
@@ -507,6 +587,7 @@ footer a:hover {
   height: 60px;
   object-fit: contain;
 }
+
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -526,6 +607,7 @@ body {
   text-decoration: none;
   margin-right: 15px;
   font-size: 14px;
+  
 }
 .top-header a#open-register,
 .top-header a#open-login {
@@ -695,7 +777,7 @@ footer {
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f1f1f1;
-  margin: 0;
+  margin: 300px;
   padding: 0;
 }
 
@@ -932,7 +1014,7 @@ a:hover {
   background: white;
   border: 1px solid #ccc;
   border-radius: 12px;
-  z-index: 1000;
+  z-index: 2000;
   box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
@@ -972,7 +1054,7 @@ a:hover {
   background: white;
   border: 1px solid #ccc;
   border-radius: 12px;
-  z-index: 1000;
+  z-index: 4000;
   box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
